@@ -5,7 +5,6 @@ Write a for loop that prints the multiples of 3 between 1 and 20.
 
 let num = 3;
 let multiple = 0;
-
 for (let i = 1; i <= 10; i++) {
   //   if (num * 1 >= 1 && num * i <= 20) console.log(num * i);
   multiple = num * i;
