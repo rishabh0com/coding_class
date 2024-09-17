@@ -4,9 +4,8 @@ do{
 }while(condition)
 */
 
-let i = 10;
-
+let a = 1;
 do {
-  console.log("hello", i);
-  i++;
-} while (i < 10);
+  console.log("hello", a)
+  a++
+}while(a<10)
