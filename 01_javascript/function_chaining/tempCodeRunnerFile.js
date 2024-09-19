@@ -1,0 +1,2 @@
+
+  if (ele.includes(str)
