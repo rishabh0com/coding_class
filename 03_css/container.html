@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container</title>
+    <style>
+      /* * < tag < class (.) < id (#) */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 1px solid red; */
+      }
+      main {
+        background: #000;
+      }
+      .container {
+        background: violet;
+      }
+      #cont {
+        background: yellow;
+      }
+      .positionContainer {
+        height: 120vh;
+        border: 5px dashed green;
+        padding: 10px;
+        position: relative;
+      }
+      .box {
+        height: 80px;
+        width: 80px;
+        margin: 5px;
+        color: white;
+      }
+      .static {
+        background: cadetblue;
+        position: static;
+        /* top bottom right lef */
+        /* top: 10px; */
+      }
+      .relative {
+        background: darkmagenta;
+        position: relative;
+        left: 100px;
+        top:100px;
+      }
+      .abosolute {
+        background: hotpink;
+        position: absolute;
+        left:100px;
+        top:100px;
+        
+      }
+      .fixed {
+        background: indianred;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+      .sticky {
+        background: forestgreen;
+        position: sticky;
+        top: 300px;
+        left: 100px;
+      }
+      .demo{
+                  height: 100vh;
+                  border: 4px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container" id="cont"><h1>Name</h1></main>
+    <div class="positionContainer">
+      <div class="static box">Static Box</div>
+      <div class="relative box">relative Box</div>
+      <div class="abosolute box">abosolute Box</div>
+      <div class="fixed box">fixed Box</div>
+      <div class="sticky box">sticky Box</div>
+    </div>
+    <div class="demo"></div>
+  </body>
+</html>

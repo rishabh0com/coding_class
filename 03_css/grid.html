@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 200px minmax(200px, 300px) 100px;
+        grid-template-rows: 200px 300px;
+        border: 2px solid red;
+        height: 600px;
+        /* grid-area: "header header header header"
+                    "main main main main"
+                    footer footer footer footer;   */
+        /* column-gap: 10px;   
+        row-gap: 10px;   */
+        gap: 10px 20px;
+        /* justify-items: center;
+        align-items: center; */
+        /* place-items: center; */
+        justify-content: space-between;
+        align-content: space-between;
+      }
+      .bahar {
+        width: 100px;
+        height: 100px;
+        background: #000;
+      }
+      .first {
+        background: #ad7474;
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      /* define differn bg for every section */
+      .second {
+        background: #74ad74;
+      }
+      .third {
+        background: #7474ad;
+      }
+      .fourth {
+        background: #ad74ad;
+      }
+      .five {
+        background: #74adad;
+      }
+      .six {
+        background: #adad74;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first">first</div>
+      <div class="second">second</div>
+      <div class="third">third</div>
+      <div class="fourth">fourth</div>
+      <div class="five">fifth</div>
+      <div class="six">sixth</div>
+    </div>
+    <div class="bahar"></div>
+  </body>
+</html>
