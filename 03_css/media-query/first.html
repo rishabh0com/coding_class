@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media query Document</title>
+  </head>
+  <style>
+    .container {
+      width: 50%;
+      margin: auto;
+      height: 50vh;
+      border: 2px double red;
+    }
+    /* media query for phone */
+    @media (max-width: 600px) {
+      .container {
+        background-color: rgb(212, 197, 158);
+      }
+    }
+    /* media query for tablet */
+    @media (min-width: 600px) {
+      .container {
+        background-color: rgb(51, 153, 54);
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        background-color: rgb(153, 68, 51);
+      }
+    }
+  </style>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

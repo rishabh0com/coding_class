@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoM</title>
+    <style>
+      #heading {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Hello</h1>
+    <p id="para" class="paragraph"></p>
+    <p id="para" class="paragraph"></p>
+    <div id="cont"></div>
+    <button onclick="doSomthing()">mughe dabao</button>
+  </body>
+  <script>
+    const heading1 = document.getElementById("heading");
+    //     console.log(heading1)
+    heading1.innerHTML = "welcome";
+    heading1.style.background = "#56ab56";
+    heading1.style.fontSize = "90px";
+    //     const p = document.getElementsByClassName("paragraph");
+    const p = document.getElementById("para");
+    //     console.log(p)
+    const container = document.getElementById("cont");
+    const button = document.createElement("button");
+    button.innerText = "Click Me";
+    console.log(button);
+    const pppp = document.createElement("p");
+    pppp.innerText = "Hii I am Rishabh";
+    container.appendChild(button);
+    container.appendChild(pppp);
+    //     container.removeChild(button)
+    //     function alertt() {
+    //       //       alert("this is alter");
+    //       console.log("hii");
+    //     }
+    //     button.addEventListener("click", alertt);
+    function doSomthing() {
+      alert("mene kr dia");
+    }
+  </script>
+</html>
