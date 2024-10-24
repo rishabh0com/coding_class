@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        padding: 10px;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button onclick="callKaro()">Click me</button>
+    <div>
+      <div>
+        <label for="">Enter Number One :</label>
+        <input id="input1" type="number" placeholder="first Number" />
+      </div>
+      <div>
+        <label for="">Enter Number Tow</label>
+        <input id="input2" type="number" />
+      </div>
+      <div>
+        <button onclick="addition()">Addition</button>
+      </div>
+      <p id="answer"></p>
+    </div>
+  </body>
+</html>
+<script>
+  const para = document.querySelector("#demo");
+  console.log(para);
+
+  function callKaro() {
+    para.innerText = "Hello";
+    para.className = "paragraph";
+    console.log(para);
+  }
+
+  // code of addition
+  const inp1 = document.getElementById("input1");
+  const inp2 = document.getElementById("input2");
+  const ans = document.querySelector("#answer");
+  function addition() {
+    const disValue = Number(inp1.value) + Number(inp2.value);
+    ans.innerText = `Answer is : ${disValue}`;
+  }
+</script>
