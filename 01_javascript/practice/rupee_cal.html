@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dollor to rupee</title>
+    <style>
+      .cont {
+        margin: 0;
+        width: 30%;
+        height: 70vh;
+        margin-top: 10vh;
+        border-radius: 10px;
+        background: #e4e4e4;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+                  <h1>Dollor to INR</h1>
+      <input type="number" name="" id="inp" />
+      <div><button id="btn">Convert</button></div>
+      <div id="display">INR : </div>
+    </div>
+    <script>
+      const btn = document.getElementById("btn");
+      const inpBox = document.getElementById("inp");
+      const displayBox = document.getElementById("display");
+      btn.addEventListener("click", () => {
+        const rupeeVal = 84.45;
+        const rupee = Number(inpBox.value) * rupeeVal;
+        displayBox.innerText = `INR : ${rupee.toFixed(2)}`;
+      });
+    </script>
+  </body>
+</html>

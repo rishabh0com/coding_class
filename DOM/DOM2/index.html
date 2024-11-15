@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ulist {
+        padding: 10px;
+        background: #c6b1b1;
+      }
+      .ulist > li {
+        padding: 10px;
+        background: #2c9e50;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Rishabh</h1>
+    </div>
+  </body>
+  <script>
+    const names = [
+      { firstName: "A ", lastName: "kumar" },
+      { firstName: "CB ", lastName: "kumar" },
+      { firstName: "ABC", lastName: "kumar" },
+    ];
+    console.log(names);
+    const cont = document.getElementById("container");
+    const para = document.createElement("p");
+    para.innerText = "rishabhtripathi123@gmail.com";
+    cont.appendChild(para);
+    const ul = document.createElement("ul");
+    ul.className = "ulist";
+    for (let i = 0; i < names.length; i++) {
+      const li = document.createElement("li");
+      li.innerText = `${names[i].firstName} ${names[i].lastName}`;
+      ul.appendChild(li);
+    }
+    cont.appendChild(ul);
+  </script>
+</html>

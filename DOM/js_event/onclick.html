@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onClick</title>
+  </head>
+  <body>
+    <button id="inp" onclick="func()">Click Me!</button>
+    <input type="text" id="inp2" />
+  </body>
+</html>
+<script>
+  //   document.getElementById("inp").addEventListener("click", () => {
+  //     // statement
+  //   });
+  function func() {
+    alert("I invocked.");
+  }
+  //   function changeFunc() {
+  //     console.log(document.getElementById("inp2").value);
+  //   }
+  document.getElementById("inp2").addEventListener("change", () => {
+    console.log(document.getElementById("inp2").value);
+  });
+</script>

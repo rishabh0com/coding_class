@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cont {
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+      .card {
+        height: 300px;
+        width: 200px;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid black;
+      }
+      img {
+        display: block;
+        height: 80%;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont"></div>
+  </body>
+  <script>
+    const resPro = fetch("https://fakestoreapi.com/products/");
+    resPro
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        disdata(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    const cont = document.getElementById("cont");
+    function disdata(res) {
+      //       console.log(res);
+      res.forEach(function (product) {
+        //         console.log(product.title);
+        const card = document.createElement("div");
+        card.className = "card";
+        const img = document.createElement("img");
+        const pTitle = document.createElement("p");
+        pTitle.innerText = product.title;
+        img.src = product.image;
+        img.alt = product.title;
+        card.appendChild(img);
+        card.appendChild(pTitle);
+        cont.appendChild(card);
+      });
+    }
+  </script>
+</html>
