@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interest Calculator</h1>
+      <div class="input-group">
+        <label for="Principal-input">Principal Amount : </label>
+        <input type="number" id="Principal-input" />
+      </div>
+      <div class="input-group">
+        <label for="rate-input">Interest Rate (%) :</label>
+        <input type="range" id="rate-input" min="0" max="100" value="9" />
+        <span id="display-interest">9%</span>
+      </div>
+      <div class="input-group">
+        <label for="period">Interest Period</label>
+        <select name="" id="period">
+          <option value="yearly">Yearly %</option>
+          <option value="quarterly">Quartely %</option>
+          <option value="monthly">Monthly %</option>
+        </select>
+      </div>
+      <div class="result-group">
+        <label for="">Calculated Amount:</label>
+        <span id="result">₹ 0.00</span>
+      </div>
+      <button id="cal-btn">Calculate</button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
