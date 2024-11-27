@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+    input {
+      padding: 8px;
+      width: 70%;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 12px;
+      margin-left: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <input type="text" id="inp" placeholder="Enter a task" />
+      <button id="add">Add+</button>
+    </div>
+    <div class="displayTasks" id="disTask"></div>
+  </div>
+  <script>
+    const tasks = [];
+    const disTask = document.getElementById("disTask");
+
+    function displayTask() {
+      disTask.innerHTML = ""; 
+      tasks.forEach((task, index) => {
+        const taskDiv = document.createElement("div");
+        taskDiv.className = "task";
+
+        const taskTitle = document.createElement("span");
+        taskTitle.innerText = `${index + 1}. ${task.title}`;
+        if (task.status) taskTitle.classList.add("completed");
+
+        const toggleButton = document.createElement("button");
+        toggleButton.innerText = task.status ? "Completed" : "Uncompleted";
+        toggleButton.addEventListener("click", () => {
+          tasks[index].status = !tasks[index].status;
+          displayTask();
+        });
+
+        taskDiv.appendChild(taskTitle); 
+        taskDiv.appendChild(toggleButton);
+        disTask.appendChild(taskDiv);
+      });
+    }
+
+    document.getElementById("add").addEventListener("click", () => {
+      const inpValue = document.getElementById("inp").value.trim();
+      if (inpValue) {
+        tasks.push({ title: inpValue, status: false });
+        document.getElementById("inp").value = ""; 
+        displayTask();
+      } else {
+        alert("Please enter a task!");
+      }
+    });
+  </script>
+</body>
+</html>
