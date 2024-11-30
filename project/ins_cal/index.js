@@ -31,7 +31,7 @@ btn.addEventListener("click", function () {
       break;
     default:
       calculatedAmount = "0.00";
-  }
+  }s
   document.getElementById("result").innerText = `₹ ${calculatedAmount.toFixed(
     2
   )}`;
